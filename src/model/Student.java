@@ -1,5 +1,7 @@
 package model;
 
+import javax.swing.*;
+
 public class Student {
     public int stt;
     public String name;
@@ -8,6 +10,10 @@ public class Student {
     public Double math;
     public Double biology;
     public Double literature;
+
+    public static String dress = "Blue pants and white shirt";
+
+    public static final byte maxAge = 30;
 
     public Student(int stt, String name, int age, String gender){
         this.stt = stt;
@@ -39,6 +45,12 @@ public class Student {
         this.biology = biology;
         this.literature = literature;
     }
+
+
+    public static void studyTime(){
+        System.out.println("Study time start at 7:00AM in the morning and 13:00PM afternoon");
+    }
+
 
     public int getStt(){
         return stt;
@@ -83,3 +95,4 @@ public class Student {
         this.literature = literature;
     }
 }
+
