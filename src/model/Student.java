@@ -12,8 +12,20 @@ public class Student {
     public Double literature;
 
     public static String dress = "Blue pants and white shirt";
-
     public static final byte maxAge = 30;
+
+    @Override
+    public String toString() {
+        return  " stt : " + stt +
+                ", name :'" + name + '\'' +
+                ", age : " + age +
+                ", gender : '" + gender + '\'' +
+                ", math : " + math +
+                ", biology : " + biology +
+                ", literature : " + literature
+                ;
+    }
+
 
     public Student(int stt, String name, int age, String gender){
         this.stt = stt;

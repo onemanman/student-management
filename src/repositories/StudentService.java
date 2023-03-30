@@ -1,4 +1,4 @@
-package service;
+package repositories;
 
 import model.Student;
 

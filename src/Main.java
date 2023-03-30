@@ -1,18 +1,17 @@
 import model.Student;
-import service.StudentServiceImpl;
+import repositories.StudentServiceImpl;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import java.util.StringTokenizer;
 
 public class Main {
     public static void main(String[] args) {
 
         //Create objects
-        Student student1 = new Student(1, "Long", 13, "Male", 8.1, 8.2, 8.3);
-        Student student2 = new Student(2, "Hoang", 15, "Male", 8.5, 8.6, 8.7);
-        Student student3 = new Student(3, "Linh", 14, "Female", 8.4, 9.0, 9.5);
-        Student student4 = new Student(4, "Ngoc", 14, "Female", 8.7, 9.0, 8.8);
+        Student student1 = new Student(0, "Long", 13, "Male", 8.1, 8.2, 8.3);
+        Student student2 = new Student(1, "Hoang", 15, "Male", 8.5, 8.6, 8.7);
+        Student student3 = new Student(2, "Linh", 14, "Female", 8.4, 9.0, 9.5);
+        Student student4 = new Student(3, "Ngoc", 14, "Female", 8.7, 9.0, 8.8);
 
         //Add object to a list
         List<Student> lstudent = new ArrayList<>();
@@ -40,7 +39,7 @@ public class Main {
                 System.out.println("Total female student is : " + student.genderCount(lstudent,"Female"));
 
             } else if (order == 2) {
-                System.out.println("Enter the ID of student");
+                System.out.println("Enter the stt of student");
                 int stt = scanner.nextInt();
                 StudentServiceImpl student = new StudentServiceImpl();
                 student.showStudentbystt(lstudent, stt);
