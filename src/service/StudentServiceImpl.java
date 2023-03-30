@@ -21,7 +21,7 @@ public class StudentServiceImpl implements StudentService {
 
     //Showing information of a student by id
     @Override
-    public void showStudentById(List<Student> lstudent, int stt) {
+    public void showStudentById(int stt) {
         System.out.println("The information of student have id is " + stt + ":");
         System.out.println(StudentServiceRepo.getByID(stt).toString());
     }

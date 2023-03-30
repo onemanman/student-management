@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface StudentService {
     void showStudentlist();
-    void showStudentById(List<Student> lstudent, int stt);
+    void showStudentById(int stt);
 }
