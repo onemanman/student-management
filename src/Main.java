@@ -34,15 +34,15 @@ public class Main {
             byte order = scanner.nextByte();
             if (order == 1) {
                 StudentServiceImpl student = new StudentServiceImpl();
-                student.showStudentlist(lstudent);
-                System.out.println("Total male student is : " + student.genderCount(lstudent,"Male"));
-                System.out.println("Total female student is : " + student.genderCount(lstudent,"Female"));
+                student.showStudentlist();
+
 
             } else if (order == 2) {
                 System.out.println("Enter the stt of student");
                 int stt = scanner.nextInt();
+
                 StudentServiceImpl student = new StudentServiceImpl();
-                student.showStudentbystt(lstudent, stt);
+                student.showStudentById(lstudent, stt);
             }
             System.out.println("------------------*-------------------");
         }
