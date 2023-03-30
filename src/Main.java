@@ -1,5 +1,5 @@
 import model.Student;
-import repositories.StudentServiceImpl;
+import service.StudentServiceImpl;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -43,7 +43,6 @@ public class Main {
                 int stt = scanner.nextInt();
                 StudentServiceImpl student = new StudentServiceImpl();
                 student.showStudentbystt(lstudent, stt);
-
             }
             System.out.println("------------------*-------------------");
         }
