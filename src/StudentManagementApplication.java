@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class StudentManagementApplication {
     public static void main(String[] args) {
-
+        StudentService studentService = new StudentServiceImpl();
         Scanner scanner = new Scanner(System.in);
         while (true) {
             //Creating menu
@@ -16,15 +16,10 @@ public class StudentManagementApplication {
             //Scaning and processing input
             byte order = scanner.nextByte();
             if (order == 1) {
-                StudentService studentService = new StudentServiceImpl();
                 studentService.showStudentlist();
-
-
             } else if (order == 2) {
                 System.out.println("Enter the stt of student");
                 int stt = scanner.nextInt();
-
-                StudentService studentService = new StudentServiceImpl();
                 studentService.showStudentById(stt);
             }
             System.out.println("------------------*-------------------");
