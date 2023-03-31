@@ -6,8 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class StudentRepoImpl implements StudentRepo {
-
+public class StudentRepositoryImpl implements StudentRepository {
     private static List<Student> mockData(){
         List<Student> students = new ArrayList<>();
         students.add(new Student(1, "Long", 13, "Male", 8.1, 8.2, 8.3));
@@ -17,11 +16,11 @@ public class StudentRepoImpl implements StudentRepo {
         return students;
     }
 
-    public static List<Student> getAll(){
+    public List<Student> getAll(){
             return mockData();
         }
 
-    public static Student getByID(int stt){
+    public Student getByID(int stt){
             return mockData().get(stt);
         }
 
