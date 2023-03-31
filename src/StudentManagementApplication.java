@@ -1,4 +1,5 @@
 import service.StudentServiceImpl;
+import service.StudentService;
 import java.util.Scanner;
 
 public class StudentManagementApplication {
@@ -15,7 +16,7 @@ public class StudentManagementApplication {
             //Scaning and processing input
             byte order = scanner.nextByte();
             if (order == 1) {
-                StudentServiceImpl studentService = new StudentServiceImpl();
+                StudentService studentService = new StudentServiceImpl();
                 studentService.showStudentlist();
 
 
@@ -23,7 +24,7 @@ public class StudentManagementApplication {
                 System.out.println("Enter the stt of student");
                 int stt = scanner.nextInt();
 
-                StudentServiceImpl studentService = new StudentServiceImpl();
+                StudentService studentService = new StudentServiceImpl();
                 studentService.showStudentById(stt);
             }
             System.out.println("------------------*-------------------");
