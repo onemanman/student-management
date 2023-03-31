@@ -1,8 +1,7 @@
 package service;
 import java.util.List;
 import model.Student;
-import repositories.StudentServiceRepo;
-
+import repository.StudentRepoImpl;
 
 public class StudentServiceImpl implements StudentService {
 
@@ -16,14 +15,14 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public void showStudentlist() {
         System.out.println("List of all student :");
-        StudentServiceRepo.getAll().stream().forEach(student -> System.out.println(student.toString()));
+        StudentRepoImpl.getAll().forEach(student -> System.out.println(student.toString()));
     }
 
     //Showing information of a student by id
     @Override
     public void showStudentById(int stt) {
         System.out.println("The information of student have id is " + stt + ":");
-        System.out.println(StudentServiceRepo.getByID(stt).toString());
+        System.out.println(StudentRepoImpl.getByID(stt).toString());
     }
 }
 
