@@ -1,8 +1,9 @@
 package model;
 
 import javax.swing.*;
+import java.io.Serializable;
 
-public class Student {
+public class Student implements Serializable {
     public int stt;
     public String name;
     public int age;
